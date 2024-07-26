@@ -445,6 +445,11 @@ footer {
         gap: 5px;
     }
 
+    .container header a{
+        font-size: 20px;
+    }
+
+
     /* Inicio  */
     .banner-text {
     font-size: 0.9em; 
@@ -578,6 +583,10 @@ footer {
     header .nav ul {
         flex-direction: column;
         gap: 5px;
+    }
+
+    .container header a{
+        font-size: 20px;
     }
     /* Inicio  */
     .banner-text {
