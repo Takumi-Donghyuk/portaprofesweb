@@ -433,6 +433,10 @@ footer {
     display: flex;
     }
 
+    .container header .logo a{
+        font-size: 15px;
+    }
+
     .icons{
         display: flex;
         flex-direction: column;
@@ -573,6 +577,10 @@ footer {
     padding: 15px 20px;
     }
 
+    .container header .logo a{
+        font-size: 15px;
+    }
+    
     .icons{
         display: flex;
         flex-direction: column;
