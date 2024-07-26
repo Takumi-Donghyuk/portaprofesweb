@@ -1,0 +1,825 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #457B9D; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body.dark-mode {
+    background-color: black;
+}
+body.dark-mode .carousel-container{
+    background-color: #808080;
+}
+body.dark-mode .carousel-item {
+    background-color: #808080;
+}
+
+
+/* Encabezado */
+header.dark-mode, nav.dark-mode {
+    background-color: #2D2D4A;
+}
+.container {
+    background-color: #1D3557;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.container header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.container header .logo a{
+    font-family: "Righteous";
+    font-size: 36px;
+    color: #FF7D00;
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+.container header a{
+    text-align: none;
+    color: #F1FAEE;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.container header a:hover{
+    color: #FF7D00;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.moon{
+    color:#F1FAEE;
+}
+.container img{
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Inicio  */
+.banner {
+    width: 100%;
+    height: 628px;  
+    margin: auto;
+    background-image: url('/Images/Banner.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-bottom: 5px solid black;
+}
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #B2FFFF;
+    padding: 40px 50px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1.5em; 
+}
+
+/* Separador */
+.separator {
+    height: 40px; 
+    background-color: #FFECD1; /* color de fondo para el separador */
+}
+
+/* Acerca de mí */
+.aboutme {
+    padding: 40px 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 1150px;
+    height: 260px;
+    overflow-y: scroll;
+    border-radius: 40px;
+    background-color: #1E2326;
+    color: #fff;
+    display: flex;
+    gap: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 2);
+    position: relative;
+}
+.aboutme span{
+    color: #7FFFD4;
+}
+.aboutme h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+.aboutme h3 {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    text-align: center;
+}
+.aboutme img {
+    border-radius: 50%; 
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin: auto;
+    box-shadow: #1E2326;
+}
+.aboutme p {
+    font-size: 1em;
+    line-height: 1.4;
+    text-align: justify;
+    margin: 5px;
+    margin-left: 20px;
+    width: 90%;
+}
+.aboutme i {
+    font-size: 30px;
+}
+.hobbies p{
+    font-size: 15px;
+    font-family: "Righteous";
+}
+.maininfo{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.briefdesc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.extra{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.interest{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto); 
+    gap: 10px;    
+}
+.hobbies{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+.infoper{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: justify;
+    line-height: 1.2rem;
+}
+.datapersonal{
+    padding-bottom: 20px;
+}
+html 
+{
+    scroll-behavior: smooth
+}
+.aboutme::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.aboutme::-webkit-scrollbar-track {
+    background: #2e3b4e;
+    border-radius: 10px;
+}
+.aboutme::-webkit-scrollbar-thumb {
+    background: #FF7D00;
+    border-radius: 10px;
+    border: 2px solid #1a1a1a; 
+}
+.aboutme::-webkit-scrollbar-thumb:hover {
+    background: #ff8800;
+}
+.aboutme::before, .aboutme::after {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 100%;
+    box-sizing: content-box;
+    background: inherit; 
+    z-index: 1;
+}
+
+/* Habilidades */
+.skills {
+    width: 1200px;
+    margin: auto;
+    background-color: #E63946;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    border-radius: 2%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 2);
+}
+
+body.dark-mode .skills {
+    background-color: #808080;
+}
+
+.technologies {
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;    
+    gap: 70px;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  body.dark-mode .tech-item {
+    background-color: #505050;
+  }
+
+  .tech-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tech-item p {
+    color: black;
+    font-weight: 800;
+}
+
+    .tech-item pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    overflow-x: auto;
+    font-size: 1.5em;
+    line-height: 1.6;
+    white-space: pre-wrap; 
+    text-align: center; 
+    overflow: hidden;
+  }
+
+  body.dark-mode .tech-item pre {
+    background-color: #606060;
+  }
+/* Proyectos*/
+.carousel-container {
+    width: 70%;
+    height: 500px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #eee;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .carousel h3 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  .carousel a {
+    text-decoration: none;
+    display: block;
+  }
+  .carousel img {
+    margin: 0 auto 20px; 
+    display: block;
+    width: 550px; 
+    height: 350px;
+    border-radius: 5px;
+    border: 2px solid #007bff;
+  }
+  
+  .carousel-item:nth-child(odd) {
+    background-color: #ccc;
+  }
+
+/*Formulario*/  
+.footer-form {
+    background: white;
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 30px 30px;
+    text-align: center;
+    flex-shrink: 0;
+}
+body.dark-mode .footer-form {
+    background-color: #808080;
+}
+
+.footer-form h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+body.dark-mode .form-group label {
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.footer-form button {
+    width: 420px;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+/* Media Queries */
+/* Dispositivos de 480 px o menos */
+@media (max-width: 480px) {    
+    /* Encabezado */
+    .container{
+        height: 160px;
+    }
+
+    .container header{
+    max-width: 480px;
+    display: flex;
+    }
+
+    .icons{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 2px;
+    }
+
+    header .nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Inicio  */
+    .banner-text {
+    font-size: 0.9em; 
+    }
+
+    /* Acerca de mí */ 
+    .aboutme {
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+    }
+
+    .maininfo{
+    width: 180px;
+    }
+
+    .extra{
+    width: 180px;
+    }
+
+    .interest{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;    
+    }
+
+    .hobbies{
+        display: flex;
+    }
+
+    .hobbies i, .hobbies p {
+        margin-left: 15px;
+    }
+
+    .aboutme p {
+        font-size: 1em;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    /* Habilidades */
+    .skills {
+    width: 70%;
+    }
+
+    .technologies {
+    width: 200px;
+    align-items: center;
+    }
+
+    .tech-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    } 
+
+    .tech-item p {
+        font-size: 13px;
+      }
+
+    .tech-item pre {
+        width: 180px;
+        font-size: 23px;
+      }
+
+    .skills .tech-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Proyectos*/
+    .carousel-container {
+        width: 70%;
+        height: 250px;
+      }
+      
+    .carousel h3 {
+        font-size: 20px;
+      }
+
+    .carousel a {
+        font-size: 8px;
+        display: block;
+      }
+     
+    .carousel img {
+        width: 200px; 
+        height: 100px;
+      }
+
+    /*Formulario*/  
+    .footer-form{
+        width: 150px;
+    }
+
+    .footer-form button {
+        width: 170px;
+    }
+
+}
+
+
+
+/*  Dispositivos de 500 px o más hasta 1179 px*/
+@media (min-width: 500px) and (max-width: 1179px) {    
+    body, pre, code {
+        font-size: 20px;
+    }
+
+    /* Encabezado */
+    .container{
+        height: 180px;
+    }
+
+    .container header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    }
+
+    .icons{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 5px;
+    }
+
+    header .nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    /* Inicio  */
+    .banner-text {
+    font-size: 1em; 
+    }
+
+    /* Acerca de mí */ 
+    .aboutme {
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .maininfo{
+    width: 180px;
+    }
+
+    .extra{
+    width: 180px;
+    }
+
+    .interest{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;    
+    }
+
+    .hobbies{
+        display: flex;
+    }
+
+    .hobbies i, .hobbies p {
+        margin-left: 15px;
+    }
+
+    .aboutme p {
+        font-size: 1em;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    /* Habilidades */
+    .skills {
+    width: 70%;
+    }
+
+    .technologies {
+    width: 200px;
+    align-items: center;
+    }
+
+    .tech-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    } 
+     
+    .tech-item p {
+        font-size: 13px;
+      }
+
+    .tech-item pre {
+        width: 180px;
+        font-size: 20px;
+      }
+
+    .skills .tech-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Proyectos*/
+    .carousel-container {
+        width: 70%;
+        height: 250px;
+      }
+      
+    .carousel h3 {
+        font-size: 20px;
+      }
+
+    .carousel a {
+        font-size: 15px;
+        display: block;
+      }
+     
+    .carousel img {
+        width: 200px; 
+        height: 100px;
+      }
+
+    /*Formulario*/  
+    .footer-form{
+        width: 150px;
+    }
+
+    .footer-form button {
+        width: 170px;
+    }
+
+}
+
+/*  Dispositivos: AsusZenBook Fold de 1280 px, Surface Pro 7 de 1368 px, iPad Pro de 1366 px y 
+iPad Air de 1180 px */
+@media (height: 1280px) or (height: 1368px) or (height: 1366px) or (height: 1180px) {    
+    body, pre, code {
+        font-size: 35px;
+    }
+    
+
+    /* Encabezado */
+    .container{
+        height: 250px;
+    }
+
+    .container header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    }
+
+    .icons{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 5px;
+    }
+
+    header .nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Inicio  */
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+    .banner-text {
+    font-size: 1em; 
+    }
+
+    /* Acerca de mí */ 
+    .aboutme {
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .maininfo{
+    width: 180px;
+    }
+
+    .extra{
+    width: 180px;
+    }
+
+    .datapersonal{
+        font-size: 20px;
+    }
+    .interest{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;    
+    }
+
+    .hobbies{
+        display: flex;
+    }
+
+    .hobbies i, .hobbies p {
+        margin-left: 15px;
+    }
+
+    .aboutme p {
+        font-size: 1em;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    /* Habilidades */
+    .skills {
+    width: 80%;
+    }
+
+    .technologies {
+    width: 400px;
+    align-items: center;
+    }
+
+    .tech-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    } 
+
+    .tech-item p {
+        font-size: 13px;
+      }
+
+    .tech-item pre {
+        width: 350px;
+        font-size: 35px;
+      }
+
+    .skills .tech-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Proyectos*/
+    .carousel-container {
+        width: 70%;
+        height: 250px;
+      }
+      
+    .carousel h3 {
+        font-size: 35px;
+      }
+
+    .carousel a {
+        font-size: 18px;
+        display: block;
+      }
+     
+    .carousel img {
+        width: 200px; 
+        height: 100px;
+      }
+
+    /*Formulario*/  
+    .footer-form{
+        width: 150px;
+        font-size: 20px;
+    }
+
+    .footer-form button {
+        width: 170px;
+    }
+
+}
