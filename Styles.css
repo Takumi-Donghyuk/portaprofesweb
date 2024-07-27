@@ -351,8 +351,8 @@ body.dark-mode .skills {
 }
 
 .carousel-item img {
-    width: 80%; 
-    height: 350px;
+    width: 60%; 
+    height: 250px;
     max-width: 550px; 
     margin: 0 auto 20px; 
     display: block;
@@ -360,6 +360,11 @@ body.dark-mode .skills {
     border: 2px solid #007bff;
 }
 
+.project_git img{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
 
 .carousel-button {
     position: absolute;
@@ -415,8 +420,8 @@ body.dark-mode .carousel-button:hover {
     width: 30px;
     height: 30px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 /*Formulario*/  
@@ -606,8 +611,8 @@ footer img {
 
     /* Proyectos*/
     .carousel-container {
-        width: 70%;
-        height: 250px;
+        width: 80%;
+        height: 350px;
       }
       
     .carousel h3 {
@@ -620,10 +625,37 @@ footer img {
       }
      
     .carousel img {
-        width: 200px; 
+        width: 170px; 
         height: 100px;
       }
 
+      .project_git img{
+        width: 20px;
+        height: 20px;
+        margin: 0 auto;
+    }
+
+      .carousel-button {
+        width: 25px; 
+        height: 25px;  
+    }
+
+    .left-button {
+        left: 10px;
+        
+    }
+    
+    .right-button {
+        right: 10px;
+        
+    }
+    
+    .arrow{
+        width: 15px;
+        height: 15px;
+        
+    }
+    
     /*Formulario*/  
     .footer-form{
         width: 150px;
@@ -748,7 +780,7 @@ footer img {
     /* Proyectos*/
     .carousel-container {
         width: 70%;
-        height: 250px;
+        height: 350px;
       }
       
     .carousel h3 {
@@ -764,6 +796,31 @@ footer img {
         width: 200px; 
         height: 100px;
       }
+
+    .project_git img{
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;
+    }
+
+      .carousel-button {
+        width: 35px; 
+        height: 35px;  
+    }
+
+    .left-button {
+        left: 10px;
+    }
+    
+    .right-button {
+        right: 10px;
+    }
+    
+    .arrow{
+        width: 20px;
+        height: 20px;
+    }
+    
 
     /*Formulario*/  
     .footer-form{
@@ -892,7 +949,7 @@ iPad Air de 1180 px */
     /* Proyectos*/
     .carousel-container {
         width: 70%;
-        height: 250px;
+        height: 400px;
       }
       
     .carousel h3 {
@@ -908,7 +965,31 @@ iPad Air de 1180 px */
         width: 200px; 
         height: 100px;
       }
+      
+    .project_git img{
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;
+    }
 
+      .carousel-button {
+        width: 35px; 
+        height: 35px;  
+    }
+
+    .left-button {
+        left: 10px;
+    }
+    
+    .right-button {
+        right: 10px;
+    }
+    
+    .arrow{
+        width: 20px;
+        height: 20px;
+    }
+    
     /*Formulario*/  
     .footer-form{
         width: 150px;
