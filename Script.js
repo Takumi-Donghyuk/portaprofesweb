@@ -1,32 +1,51 @@
+// Lógica del carrusel de proyectos
 const carousel = document.querySelector('.carousel');
-let index = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+const leftButton = document.querySelector('.left-button');
+const rightButton = document.querySelector('.right-button');
+let currentIndex = 0;
 
-function showNextItem() {
-  index++;
-  if (index >= carousel.children.length) {
-    index = 0;
-  }
-  carousel.style.transform = `translateX(-${index * 100}%)`;
+function updateCarousel() {
+    const offset = -currentIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+
+    // Mostrar u ocultar las flechas según el índice actual
+    if (currentIndex === 0) {
+        leftButton.classList.remove('show-left-button');
+    } else {
+        leftButton.classList.add('show-left-button');
+    }
+
+    if (currentIndex === totalItems - 1) {
+        rightButton.classList.remove('show-right-button');
+    } else {
+        rightButton.classList.add('show-right-button');
+    }
 }
 
-setInterval(showNextItem, 6000);
-
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    if (name && email && message) {
-        alert('Mensaje enviado exitosamente!');
-        document.getElementById('contactForm').reset();
+document.querySelector('.right-button').addEventListener('click', () => {
+    if (currentIndex < totalItems - 1) {
+        currentIndex++;
     } else {
-        alert('Por favor, completa todos los campos.');
+        currentIndex = 0; // Loop back to the first item
     }
+    updateCarousel();
 });
 
-// Clicar para traducir a otro idioma
+document.querySelector('.left-button').addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = totalItems - 1; // Loop back to the last item
+    }
+    updateCarousel();
+});
+
+// Initialize carousel
+updateCarousel();
+
+// lógica de clicar para traducir a otro idioma
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll("[data-es]");
   const esLink = document.getElementById("es");
@@ -61,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Lógica del modo oscuro
 document.getElementById('dark-mode-toggle').addEventListener('click', function() {
   document.body.classList.toggle('dark-mode');
   document.querySelector('header').classList.toggle('dark-mode');
