@@ -37,12 +37,12 @@ document.querySelector('.left-button').addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
     } else {
-        currentIndex = totalItems - 1; // Loop back to the last item
+        currentIndex = totalItems - 1; 
     }
     updateCarousel();
 });
 
-// Initialize carousel
+
 updateCarousel();
 
 // lógica de clicar para traducir a otro idioma
