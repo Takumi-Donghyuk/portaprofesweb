@@ -28,7 +28,7 @@ document.querySelector('.right-button').addEventListener('click', () => {
     if (currentIndex < totalItems - 1) {
         currentIndex++;
     } else {
-        currentIndex = 0; // Loop back to the first item
+        currentIndex = 0; 
     }
     updateCarousel();
 });
