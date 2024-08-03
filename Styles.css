@@ -116,6 +116,7 @@ ul{
 
 /* Acerca de mí */
 .aboutme {
+    font-size: 0.9em;
     padding: 40px 20px;
     text-align: center;
     margin: auto;
